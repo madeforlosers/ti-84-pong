@@ -2,3 +2,5 @@
 simple slow pong game i made in ti-84 basic
 
 will add actual game file soon
+
+file is 679 bytes
