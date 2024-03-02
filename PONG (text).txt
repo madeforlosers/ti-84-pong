@@ -1,105 +1,62 @@
-ClrHome
-Disp "PONG"
-Disp "BY JAMES C."
-1→O
-Disp ""
-Disp "PRESS ENTER"
-Disp "TO START"
-While O
-If getKey=105:Then
-0→O
-End
-End
+Disp "PONG
+Disp "BY JAMES C.
+Disp "PRESS ENTER
+Pause
 Lbl M
-ClrHome
-Disp "LOADING..."
-"PADDLE POS
-1→X
 3→Y
-"BALL POS
-randInt(3,12)→A
-randInt(3,6)→B
-"BALL DIRECTION
+randInt(3,12→A
+randInt(3,6→B
 1→C
 1→D
-"-1 IS UP
-" 1 IS DOWN
-"GAME STATUS
 1→G
-"SCORE
 1→R
 ClrHome
-Output(Y,X,"]"
 While G
-getKey→K
-If K=34:Then
-Output(Y,X," "
-Y+1→Y
-If Y>8:Then
+Output(Y,X," 
+getKey
+Y+(Ans=34)-(Ans=25)→Y
+If Y>8
+1→Y
+If not(Y
 8→Y
-End
-Output(Y,X,"]"
-End
-If K=25:Then
-Output(Y,X," "
-Y-1→Y
-If Y<2:Then
-2→Y
-End
-Output(Y,X,"]"
-End
+Output(Y,X,"]
 If B>7 or B<2
-Then
 D*-1→D
-End
-If A>15
-Then
+If A>15 or A<2
 C*-1→C
-End
-If A<2 and B=Y
+If A>2
 Then
-R+1→R
-C*-1→C
-Else
-If A<2
-Then
-0→G
+R+(B=Y→R
+If B≠Y
 Goto S
 End
-End
+Output(B,A," 
 A+C→A
 B+D→B
-Output(B-D,A-C," "
-Output(B,A,"*"
+Output(B,A,0
 End
 Lbl S
 ClrHome
-Output(2,4,"GAME OVER!"
-Output(3,2,"YOUR SCORE WAS"
-9-int(log(R)+1)→L
-Output(4,L,R-1
-Output(5,4,"TRY AGAIN?"
-Output(7,8,"YES"
-Output(8,8,"NO"
+Output(2,4,"GAME OVER!
+Output(3,2,"YOUR SCORE WAS
+8-int(log(R
+Output(4,Ans,R-1
+Output(5,4,"TRY AGAIN?
+Output(7,8,"YES
+Output(8,8,"NO
 1→P
-7→O
-"OPTIONS
+0→O
 While P
-getKey→K
-If K=34:Then
-Output(7,7," "
-8→O
-End
-If K=25:Then
-Output(8,7," "
-7→O
-End
-If K=105:Then
-If O=7:Then
-1→G
+getKey
+If Ans>99
+Then
+If not(O
 Goto M
+Stop
 End
-0→P
-End
-Output(O,7,">"
+If Ans
+Ans=34→O
+Output(8,7," 
+Output(7,7," 
+Output(O+7,7,">
 End
